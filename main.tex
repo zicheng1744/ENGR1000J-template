@@ -1,84 +1,46 @@
 % LaTeX template for ENGR1000J Summer 2025 Final Project Report
 % Fully conforms to the provided Word template and formatting guidelines
 
-\documentclass[10pt]{article}
-\usepackage{CJKutf8}
-\usepackage{times}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{tocloft}
-\usepackage{titlesec}
-\usepackage{parskip}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage[letterpaper, margin=1in]{geometry}
-\usepackage{fancyhdr}
-\usepackage[export]{adjustbox} % 支持 valign 垂直对齐
-\usepackage{parskip}
-\usepackage[square, numbers]{natbib}
-\usepackage{setspace} % 控制行距
+\documentclass{engr1000j-s2} % 使用自定义的类文件
 
-% 定义“首页”页脚样式
-\fancypagestyle{firstpage}{ \fancyhf{} % 清空默认内容
-\fancyfoot{ \parbox{\textwidth}{\large\centering \textcolor{gray}{ ${}^{1}$ University of Michigan -- Shanghai Jiao Tong University Joint Institute\\ ${}^{2}$ Another Institute if applicable } } } \renewcommand{\footrulewidth}{0pt} \renewcommand{\headrulewidth}{0pt} }
-
-% 定义“常规页”页脚样式
-\fancypagestyle{mystyle}{ \fancyhf{} % 清空默认内容
-\fancyfoot{ \noindent \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc@{}}\adjustbox{valign=c}{\includegraphics[height=0.3in]{figures/JI logo.png}} & \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/team logo.png}} & \adjustbox{valign=c}{\small \textcolor{gray}{\begin{tabular}{@{}l@{}}Instructors: \\ Dr. Yanfeng Shen \\ Dr. Ting Sun\end{tabular}}} & \adjustbox{valign=c}{\raggedleft\small \textcolor{gray}{Page \textbf{\thepage} of 13}}\end{tabular*} } \renewcommand{\footrulewidth}{0pt} % 不显示常规页页脚分隔线
-\renewcommand{\headrulewidth}{0pt} }
-
-% 设置默认页脚样式为 "mystyle"
-
-% Paragraph formatting
-\setlength{\parindent}{0pt} % No indentation
-
-% 设置段前、段后间距和固定行距
-\setlength{\parskip}{10pt} % 段后10磅
-\AtBeginDocument{ \linespread{1}%
-\setlength{\baselineskip}{13pt}%
-\let\latexoriginalpar\par
-%\renewcommand{\par}{\vspace*{12pt}\latexoriginalpar}%
-}
-
-% Caption formatting
-\captionsetup[figure]{labelfont=bf,labelsep=space,justification=justified,font=small,skip=6pt}
-\captionsetup[table]{labelfont=bf,labelsep=space,justification=justified,font=small,skip=6pt}
-% Ensure captions end with a period
+% 注意：engr1000j-s2.cls 文件已包含以下常用宏包和设置：
+% CJKutf8, times (newtxtext/newtxmath), setspace, graphicx, caption, tocloft,
+% titlesec, parskip, booktabs, longtable, hyperref, xcolor, geometry,
+% fancyhdr, adjustbox, natbib, tocbibind.
 %
-% Section title formatting
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{1em}{}
-
-% Table of contents spacing
-\setlength{\cftbeforesecskip}{4pt}
-\setlength{\cftbeforetoctitleskip}{0pt}
-
-% Reference font size
-\renewcommand{\bibfont}{\small}
-
-% No blank spaces at page bottoms
-\raggedbottom
+% 它也定义了：
+% - \bibname 为 "Reference"
+% - firstpage 和 mystyle 页眉页脚样式
+% - 段落格式 (段间距10pt, 固定行距13pt)
+% - 图表标题格式
+% - 目录格式
+% - 参考文献字体大小
+% - \raggedbottom
+%
+% 因此，原 main.tex 中的大部分 \usepackage 和相关设置命令都已移除。
+% 如果需要调整 engr1000j-s2.cls 中的默认设置 (例如 \parskip),
+% 可以在此文档类声明之后重新定义它们，或者直接修改 .cls 文件。
+% 例如，如果希望段后间距为 18pt 而不是类文件默认的 10pt，可以在这里添加：
+% \setlength{\parskip}{18pt}
 
 % Main content
 \begin{document}
   \thispagestyle{firstpage}
   \includegraphics[height=0.8in]{figures/headlogo.png}
   \\ \textbf{\Large ENGR1000J Introduction to Engineering, Summer 2025}\\[0.5em]
-  \textbf{{\Large \today}}\\[1em]
+  \textbf{{\Large \today}}\\[0em]
   % Title block on first page
   \begin{center}
     % Logos side by side
     \begin{minipage}{0.45\textwidth}
-      \centering
-      \includegraphics[height=1in]{figures/team logo.png}
+      \includegraphics[height=0.8in]{figures/team logo.png}
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
       \textbf{\Large Group 0: TC team}
-    \end{minipage}\\[1em]
+    \end{minipage}\\[0.2em]
   \end{center}
+
+  
 
   \noindent
   {\color{gray!30}\rule{\textwidth}{0.1pt}}
@@ -88,10 +50,16 @@
 
   {\includegraphics[height=3in]{figures/preface_picture.png}}
 
+  \hspace{1em}
+
   % Team members
+  { % 开始局部设置
+  \Large % 设置字体大小为 \Large
+  \setlength{\parskip}{5pt} % 设置局部行距为默认的1.2倍，你可以根据需要调整这个值
+  \setlength{\baselineskip}{0pt}
   Team Member${}^{1}$ (\begin{CJK}
     {UTF8}{gbsn} 中文名
-  \end{CJK}), ${}^{1}$, \textit{\underline {email@address}}
+  \end{CJK}), \textit{\underline {email@address}}
 
   Zeyi Chen${}^{1}$ (\begin{CJK}
     {UTF8}{gbsn} 陈泽奕
@@ -106,6 +74,8 @@
   }$
 
   Different Institute Member ${}^{2}$, \textit{\underline {email@address}}
+
+  }
   % 在第一页内容后切换为常规页脚
 
   \newpage
@@ -113,8 +83,9 @@
   % Abstract
   \section*{Abstract}
   \addcontentsline{toc}{section}{Abstract}
-  One paragraph (200--400 words) summarizing background, objectives, methods,
-  key observations, conclusions, and significance.
+  This section includes information for those readers who will not read the entire document. Although this section appears first in the document, it is usually written last. It is one-paragraph long (not an introduction) and complete in itself (no reference numbers). It should indicate the general engineering background of your project and state the objectives. The design methodology, measurement techniques, observed facts, key understandings and conclusions must be stated in summary form. It should include a description of the project background, the project aim, the major tasks undertaken, the measurement techniques employed, key observations and physical understanding, conclusion and the significance of your findings. Word count is 200-400. 
+
+  \hspace{1em}
 
   % Acknowledgments
   \section*{Acknowledgments}
@@ -150,15 +121,18 @@
   references at the end of the report. Reference citations in the text should be
   in numerical order. [e.g., \citep{brandis2016nonequi}.].
 
+  \hspace{1em}
+  
   \textbf{Statements}
   \begin{itemize}
-    \item Problem: clearly and concisely sums up what is the problem.
+    \item Problem: clearly and concisely sums up what is the problem.\\
 
-    \item Need/s: clearly and concisely sums up what is/are needed.
+    \item Need/s: clearly and concisely sums up what is/are needed.\\
 
-    \item Solution/s: clearly and concisely sums up the solution your project
-      offers.
+    \item Solution/s: clearly and concisely sums up the solution your project offers.
   \end{itemize}
+
+  \hspace{1em}
 
   \section{Project Management}
 
@@ -187,13 +161,13 @@
   \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/gantt_chart.png}
-    \caption{Gantt chart for the project.}
+    \caption{\quad Gantt chart for the project.}
     \label{fig:gantt_chart}
   \end{figure}
 
   \begin{table}[h]
     \centering
-    \caption{Project estimated budget}
+    \caption{\quad Project estimated budget}
     \begin{tabular}{p{0.15\textwidth} p{0.45\textwidth} p{0.3\textwidth}}
       \toprule \textbf{Task} & \textbf{Description of work}        & \textbf{Anticipated costs, Yuan} \\
       \midrule 1             & 3D-printing container               & 150.00                           \\
@@ -210,8 +184,8 @@
 
   \begin{table}[!ht]
     \centering
-    \caption{Bill of Materials.}
-    \begin{tabular}{ccccr}
+    \caption{\quad Bill of Materials.}
+    \begin{tabular}{p{0.08\textwidth} p{0.35\textwidth} p{0.20\textwidth} p{0.17\textwidth} p{0.10\textwidth}}
       \toprule Qty & Part Description & Vendor  & Part No. & Price (RMB) \\
       \midrule 8   & Wheel            & Vendor1 & --       & 5.70        \\
       \dots        & \dots            & \dots   & \dots    & \dots       \\
@@ -225,22 +199,58 @@
   their principal roles. These roles/contributions listed for each personnel
   shall be coherent with the tasks shown in Gantt Chart. The contributions of each
   team member are to be in agreement among the complete team, therefore, a signature
-  is required from each member to endorse the content. (See Table 3).
+  is required from each member to endorse the content. (See Table \ref{tab:personnel} for an example.)
+
+  \begin{table}[!ht]
+    \centering
+    \caption{\quad Key personnel responsible for the project and their contributions.}
+    \begin{tabular}{p{0.25\textwidth} p{0.45\textwidth} p{0.25\textwidth}}
+      \toprule Member & Contributions & Signature \\
+      \midrule Ting Sun* & Example contribution text for Ting Sun. & Sign here to acknowledge and agree with the content. \\
+      Zeyi Chen &  &  \\
+      Xinchang Wang &  &  \\
+      \dots & \dots & \dots \\
+      Member Name & Specific contributions of this member. &  \\
+      \bottomrule
+    \end{tabular}
+    \label{tab:personnel}
+  \end{table}
 
   Risk Assessment: What needs to be in place for your project to succeed? What
   are the major sources of risk and how will you attempt to mitigate them? What is
   your fallback plan? What might be safety concerns?
 
+  \hspace{1em}
+  
   \section{System Design and Assembly}
-  Provide schematic, component details, assembly steps.
+  In this section you present your performance measurement results along with supporting text which ensures that the reader understands the data (description of post-processing or evaluation methods, analysis of uncertainties, exposition of tables/figures, correlations). 
+  
+  Next is the most important part of the report – you are expected to assess critically what your results mean, what design implication they might have to the engineering community, and whether they make sense according to what you learned from the engineering lectures. Do not simply repeat in words what is obvious from your figures and tables (this is, sadly, a common mistake). 
 
+  Refer to a figure or a table by its number, not “figure below” or “table above.” When citing a figure in the text, use the abbreviation “Fig.” except at the beginning of a sentence. Do not abbreviate “Table”.  Place a figure or a table close to (often immediately before or after) the “paragraph” of its first mention. By contrast, it is not necessary --- and so DO NOT place a figure or a table immediately after the “sentence” of the first mention; doing so inevitably breaks up a coherent paragraph (consisting of a topic sentence, several sentences of analysis and evidence, and a concluding remark) into several incoherent “paragraphs,” some made of a single sentence.
+  
+  Figures should have no background, borders, or outlines. Captions are bold with a single tab (no hyphen or other character) between the figure number and figure description. Keep the lettering size and style uniform both within each figure and throughout all of your illustrations.  An example Figure is shown in Fig. \ref{fig:graph}.
+
+
+  \begin{figure}[hbt!]  
+  \centering
+  \includegraphics[width=.5\textwidth]{figures/graph.jpg}
+  \caption{\quad Magnetization as a function of applied fields.}
+  \label{fig:graph}
+  \end{figure}
+
+  \hspace{1em}
+  
   \section{Measurement Results and Discussion}
   Present results with figures and tables. Analyze and interpret critically.
+
+  \hspace{1em}
 
   \section{Conclusions}
   Summarize achievements, objectives met, lessons learned, future work.
 
-  \bibliographystyle{new-aiaa} % 使用你提供的样式文件
+  \hspace{1em}
+
   \bibliography{sample} % 引用 references.bib 文件
 
   \newpage
