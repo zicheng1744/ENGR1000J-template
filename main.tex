@@ -1,27 +1,5 @@
-% LaTeX template for ENGR1000J Summer 2025 Final Project Report
-% Fully conforms to the provided Word template and formatting guidelines
-
-\documentclass{engr1000j-s2} % 使用自定义的类文件
-
-% 注意：engr1000j-s2.cls 文件已包含以下常用宏包和设置：
-% CJKutf8, times (newtxtext/newtxmath), setspace, graphicx, caption, tocloft,
-% titlesec, parskip, booktabs, longtable, hyperref, xcolor, geometry,
-% fancyhdr, adjustbox, natbib, tocbibind.
-%
-% 它也定义了：
-% - \bibname 为 "Reference"
-% - firstpage 和 mystyle 页眉页脚样式
-% - 段落格式 (段间距10pt, 固定行距13pt)
-% - 图表标题格式
-% - 目录格式
-% - 参考文献字体大小
-% - \raggedbottom
-%
-% 因此，原 main.tex 中的大部分 \usepackage 和相关设置命令都已移除。
-% 如果需要调整 engr1000j-s2.cls 中的默认设置 (例如 \parskip),
-% 可以在此文档类声明之后重新定义它们，或者直接修改 .cls 文件。
-% 例如，如果希望段后间距为 18pt 而不是类文件默认的 10pt，可以在这里添加：
-% \setlength{\parskip}{18pt}
+% LaTeX template for ENGR1000J-S2 Summer 2025 Final Project Report
+\documentclass{engr1000j-s2}
 
 % Main content
 \begin{document}
@@ -29,9 +7,9 @@
   \includegraphics[height=0.8in]{figures/headlogo.png}
   \\ \textbf{\Large ENGR1000J Introduction to Engineering, Summer 2025}\\[0.5em]
   \textbf{{\Large \today}}\\[0em]
-  % Title block on first page
+
   \begin{center}
-    % Logos side by side
+
     \begin{minipage}{0.45\textwidth}
       \includegraphics[height=0.8in]{figures/team logo.png}
     \end{minipage}\hfill
@@ -40,22 +18,19 @@
     \end{minipage}\\[0.2em]
   \end{center}
 
-  
-
   \noindent
   {\color{gray!30}\rule{\textwidth}{0.1pt}}
 
   {\Huge Project Title}
-  % Graphical abstract placeholder
 
   {\includegraphics[height=3in]{figures/preface_picture.png}}
 
   \hspace{1em}
 
   % Team members
-  { % 开始局部设置
-  \Large % 设置字体大小为 \Large
-  \setlength{\parskip}{5pt} % 设置局部行距为默认的1.2倍，你可以根据需要调整这个值
+  { 
+  \Large 
+  \setlength{\parskip}{5pt}
   \setlength{\baselineskip}{0pt}
   Team Member${}^{1}$ (\begin{CJK}
     {UTF8}{gbsn} 中文名
@@ -76,7 +51,6 @@
   Different Institute Member ${}^{2}$, \textit{\underline {email@address}}
 
   }
-  % 在第一页内容后切换为常规页脚
 
   \newpage
   \pagestyle{mystyle}
@@ -90,10 +64,10 @@
   % Acknowledgments
   \section*{Acknowledgments}
   \addcontentsline{toc}{section}{Acknowledgments}
-  Thank all parties who assisted this project, such as TAs, instructors, companies,
-  and teammates.
-  \newpage
+  Thank all parties who assisted this project, such as TAs, instructors, companies, and teammates.
+  
   % Table of Contents
+  \newpage
   \tableofcontents
   \thispagestyle{mystyle}
   \newpage
@@ -161,38 +135,55 @@
   \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/gantt_chart.png}
-    \caption{\quad Gantt chart for the project.}
+    \caption{\quad \textbf{Gantt chart for the project.}}
     \label{fig:gantt_chart}
   \end{figure}
 
   \begin{table}[h]
     \centering
-    \caption{\quad Project estimated budget}
-    \begin{tabular}{p{0.15\textwidth} p{0.45\textwidth} p{0.3\textwidth}}
-      \toprule \textbf{Task} & \textbf{Description of work}        & \textbf{Anticipated costs, Yuan} \\
-      \midrule 1             & 3D-printing container               & 150.00                           \\
-      2                      & Construction of suspension system   & 100.00                           \\
-      3                      & Realisation of automatic navigation & 200.00                           \\
-      4                      & Construction of jogging system      & 200.00                           \\
-      5                      & Realisation of additional function  & 200.00                           \\
-      6                      & Tools                               & 150.00                           \\
-      \midrule               & \textbf{Total}                      & \textbf{1000.00}                 \\
+    \caption{\quad \textbf{Project estimated budget}}
+    \begin{tabular}{
+      p{0.15\textwidth} 
+      >{\centering\arraybackslash}p{0.45\textwidth} 
+      >{\centering\arraybackslash}p{0.3\textwidth}
+    }
+      \toprule 
+      Task & Description of work & Anticipated costs, Yuan \\
+      \midrule 
+      1 & 3D-printing container               & 150.00                           \\
+      2 & Construction of suspension system   & 100.00                           \\
+      3 & Realisation of automatic navigation & 200.00                           \\
+      4 & Construction of jogging system      & 200.00                           \\
+      5 & Realisation of additional function  & 200.00                           \\
+      6 & Tools                               & 150.00                           \\
+      \midrule 
+        & Total                               & 1000.00                      
+          \\
       \bottomrule
     \end{tabular}
     \label{tab:budget}
-  \end{table}
+\end{table}
 
-  \begin{table}[!ht]
-    \centering
-    \caption{\quad Bill of Materials.}
-    \begin{tabular}{p{0.08\textwidth} p{0.35\textwidth} p{0.20\textwidth} p{0.17\textwidth} p{0.10\textwidth}}
-      \toprule Qty & Part Description & Vendor  & Part No. & Price (RMB) \\
-      \midrule 8   & Wheel            & Vendor1 & --       & 5.70        \\
-      \dots        & \dots            & \dots   & \dots    & \dots       \\
-      \bottomrule
-    \end{tabular}
-    \label{tab:bill_of_materials}
-  \end{table}
+\begin{table}[!ht]
+  \centering
+  \caption{\quad \textbf{Bill of Materials}}
+  \begin{tabular}{
+    p{0.08\textwidth} 
+    >{\centering\arraybackslash}p{0.30\textwidth} 
+    >{\centering\arraybackslash}p{0.20\textwidth} 
+    >{\centering\arraybackslash}p{0.15\textwidth} 
+    >{\centering\arraybackslash}p{0.10\textwidth}
+  }
+    \toprule 
+    Qty & Part Description & Vendor  & Part No. & Price (RMB) \\
+    \midrule 
+    8   & Wheel            & Vendor1 & --       & 5.70        \\
+    \dots & \dots          & \dots   & \dots    & \dots       \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:bill_of_materials}
+\end{table}
+
 
   Personnel: List the key personnel responsible for completion of the project,
   as well as other personnel involved in the project. Include brief summaries of
@@ -202,19 +193,26 @@
   is required from each member to endorse the content. (See Table \ref{tab:personnel} for an example.)
 
   \begin{table}[!ht]
-    \centering
-    \caption{\quad Key personnel responsible for the project and their contributions.}
-    \begin{tabular}{p{0.25\textwidth} p{0.45\textwidth} p{0.25\textwidth}}
-      \toprule Member & Contributions & Signature \\
-      \midrule Ting Sun* & Example contribution text for Ting Sun. & Sign here to acknowledge and agree with the content. \\
-      Zeyi Chen &  &  \\
-      Xinchang Wang &  &  \\
-      \dots & \dots & \dots \\
-      Member Name & Specific contributions of this member. &  \\
-      \bottomrule
-    \end{tabular}
-    \label{tab:personnel}
-  \end{table}
+  \centering
+  \caption{\quad \textbf{Key personnel responsible for the project and their contributions}}
+  \begin{tabular}{
+    p{0.25\textwidth} 
+    >{\centering\arraybackslash}p{0.40\textwidth} 
+    >{\centering\arraybackslash}p{0.25\textwidth}
+  }
+    \toprule 
+    Member & Contributions & Signature \\
+    \midrule 
+    Ting Sun* & Specific contribution of Ting Sun & Sign here to acknowledge and agree with the content. \\
+    Zeyi Chen &  &  \\
+    Xinchang Wang &  &  \\
+    \dots & \dots & \dots \\
+    Member Name &  &  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:personnel}
+\end{table}
+
 
   Risk Assessment: What needs to be in place for your project to succeed? What
   are the major sources of risk and how will you attempt to mitigate them? What is
@@ -235,7 +233,7 @@
   \begin{figure}[hbt!]  
   \centering
   \includegraphics[width=.5\textwidth]{figures/graph.jpg}
-  \caption{\quad Magnetization as a function of applied fields.}
+  \caption{\quad \textbf{Magnetization as a function of applied fields.}}
   \label{fig:graph}
   \end{figure}
 
@@ -251,7 +249,7 @@
 
   \hspace{1em}
 
-  \bibliography{sample} % 引用 references.bib 文件
+  \bibliography{sample}
 
   \newpage
   \appendix
