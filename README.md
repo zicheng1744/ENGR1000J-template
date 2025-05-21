@@ -1,56 +1,45 @@
-# ENGR1000J LaTeX 模板
+# ENGR1000J-S2 LaTeX 模板
 
-该仓库包含 ENGR1000J 夏季学期 2025 最终项目报告的 LaTeX 模板。
+以下是 ENGR1000J-S2 (syf/st section) report 的 LaTeX 模板。模板为手动创建修改，故可能存在一些小问题。请在使用过程中注意检查格式和排版，任何因模板问题导致的错误和扣分不予负责。**如有任何疑问或建议，请联系TA进行模板修正。**
 
 ## 概述
 
-此模板旨在帮助学生按照提供的 Word 模板和格式指南创建其 ENGR1000J 项目报告。它包括：
+此模板适用于本课程 phase 1/2 report。它基于原先word模板创建，并进行了适当的修改以满足 LaTeX 格式要求。模板包括：
 
 * 一个主要的 LaTeX 文件 (`main.tex`)，其中包含报告的结构和格式。
+* 一个自定义 LaTeX 类文件 (`engr1000j-s2.cls`)，专为 UM-SJTU ENGR1000J-S2 课程设计。
 * 一个 BibTeX 样式文件 (`new-aiaa.bst`)，用于格式化参考文献。
 * 一个示例 BibTeX 文件 (`sample.bib`)，其中包含各种类型的参考文献示例。
 * 一个 `figures` 文件夹，其中包含报告中使用的徽标和占位符图像。
-
-## 文件结构
-
-```text
-.
-├── figures/                # 包含图像文件
-│   ├── gantt_chart.png
-│   ├── headlogo.png
-│   ├── JI logo.png
-│   ├── preface_picture.png
-│   └── team logo.png
-├── main.tex                # 主要的 LaTeX 源文件
-├── new-aiaa.bst            # BibTeX 样式文件 (AIAA 样式)
-├── README.md               # 本文件
-└── sample.bib              # 示例 BibTeX 参考文献文件
-```
-
-## 如何使用
-
-1.  **克隆或下载此仓库。**
-2.  **编辑 `main.tex` 文件：**
-    *   在 `\title{}` 中更新项目标题。
-    *   在相应部分添加团队成员信息。
-    *   填写报告的各个部分（摘要、致谢、引言等）。
-    *   将 `figures/preface_picture.png` 替换为您的图形摘要。
-    *   根据需要更新 `figures` 文件夹中的其他图像（例如团队徽标）。
-3.  **编辑 `sample.bib` 文件：**
-    *   添加您的参考文献条目。
-    *   在 `main.tex` 中使用 `\cite{}` 命令引用这些条目。
-4.  **编译 LaTeX 文档：**
-    *   使用 LaTeX 发行版（例如 MiKTeX、TeX Live、Overleaf）编译 `main.tex`。通常，您需要多次编译才能正确生成目录和参考文献。典型的编译顺序是：`pdflatex` -> `bibtex` -> `pdflatex` -> `pdflatex`。
-
-## 依赖项
-
-*   LaTeX 发行版（例如 MiKTeX、TeX Live）。
-*   `main.tex` 文件中列出的 LaTeX 宏包（例如 `CJKutf8`、`times`、`graphicx`、`natbib` 等）。这些宏包通常包含在标准 LaTeX 发行版中，或者可以通过其宏包管理器进行安装。
+* 一个 `Report Guidance.md` 文件，其中包含报告的详细说明和要求。
 
 ## 贡献者
 
-*   （在此处添加贡献者信息，如果适用）
+* **LaTeX 模板和类文件:**
+  * ENGR1000J-S2 教学团队 (2025)
+  * 构建者: Zeyi Chen
+  * 修订者: Xinchang Wang
 
-## 许可证
+---
 
-（在此处添加许可证信息，如果适用。如果未指定，可以考虑添加一个标准的开源许可证，例如 MIT 许可证。）
+## ENGR1000J-S2 LaTeX Template (English Version)
+
+This is the LaTeX template for the ENGR1000J-S2 (syf/st section) report. The template was manually created and modified, so there might be some minor issues. Please check the formatting and layout carefully during use. We are not responsible for any errors or point deductions caused by template problems. **If you have any questions or suggestions, please contact the TA to revise the template.**
+
+## Overview
+
+This template is applicable to the phase 1/2 report for this course. It was created based on the original Word template and has been appropriately modified to meet LaTeX formatting requirements. The template includes:
+
+* A main LaTeX file (`main.tex`) containing the structure and formatting of the report.
+* A custom LaTeX class file (`engr1000j-s2.cls`) designed for the UM-SJTU ENGR1000J-S2 course.
+* A BibTeX style file (`new-aiaa.bst`) for formatting references.
+* A sample BibTeX file (`sample.bib`) with examples of various types of references.
+* A `figures` folder containing logos and placeholder images used in the report.
+* A `Report Guidance.md` file containing detailed instructions and requirements for the report.
+
+## Contributors
+
+* **LaTeX Template and Class File:**
+  * ENGR1000J-S2 Teaching Team (2025)
+  * Constructed by: Zeyi Chen
+  * Revised by: Xinchang Wang
