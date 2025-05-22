@@ -5,7 +5,7 @@ This document summarizes the common mistakes and issues. You will lose your poin
 ## Basic
 
 - **Alignment**: Justify align.
-  ![alt text](image.png)
+  ![alt text](figures/align.png)
 - **Paragraph Spacing**: No space is required at the beginning of each paragraph!
 - **Title and Text Separation**: Do not split the title and the text! This means your title should be on the same page as the text.
 - **Figure Caption Punctuation**: Missing period after the figure caption. Every figure caption should end with a period.
