@@ -5,7 +5,7 @@
 % Constructed by Zeyi Chen and revised by Xinchang Wang
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{engr1000j-s2}[2025/05/21, v1.0 Custom ENGR1000J Template]
+\ProvidesClass{engr1000j-s2}[2025/05/21, v0.2 Custom ENGR1000J Template]
 
 \LoadClass[10pt]{article}
 
@@ -52,6 +52,8 @@
 \RequirePackage[sort&compress,numbers]{natbib}
 \bibliographystyle{new-aiaa}
 \renewcommand{\bibfont}{\small}
+\RequirePackage[hyphens]{url}
+\RequirePackage{hyperref}
 \renewcommand{\bibname}{Reference} 
 
 
