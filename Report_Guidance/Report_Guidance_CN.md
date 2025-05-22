@@ -1,40 +1,67 @@
-# Report Guidance
+# ENGR1000J-S2 Report Guidance
 
-This document summarizes the common mistakes and issues. You will lose your points if you do not follow these guidelines. Please read carefully and make sure your report is formatted correctly.
+这篇Guidance是为ENGR1000J-S2(syf/st section)报告写作指导而准备的。以下列出了一系列常见的错误和写作的
+本文件总结了常见的格式错误和注意事项。如果不遵循这些规范，你将会被扣分。请认真阅读并确保你的报告格式正确。
 
-## Basic
+## 基本要求
 
-- **Alignment**: Justify align.
-  ![alt text](figures/align.png)
-- **Paragraph Spacing**: No space is required at the beginning of each paragraph!
-- **Title and Text Separation**: Do not split the title and the text! This means your title should be on the same page as the text.
-- **Figure Caption Punctuation**: Missing period after the figure caption. Every figure caption should end with a period.
-- **Figure Caption Format**: Consistent format for figure caption (Please refer to the template).
+### 正文需两端对齐
 
-## Font
+- 正确示范：
+<img src="figures/align.png" alt="示例" width="300"/>
 
-- **Font Size**: Subtitle font size should be larger than the body text.
-- **Font in Figures**: All text in figures must follow the same font requirements as the body text.
+  
+### 每段开头不需要空格
 
-## Spacing
+- 错误示范：
+<img src="figures/indent.png" alt="示例" width="600"/>
+  
+### 标题不能与正文分在不同页，标题应与正文在同一页
 
-**common mistakes**:
+- 错误示范：
+<img src="figures/page_break.png" alt="示例" width="300"/>
 
-- **Incorrect spacing between lines**: Ensure consistent line spacing throughout the document.
-- **Incorrect spacing between paragraphs**: Maintain consistent spacing between paragraphs.
-- **Incorrect spacing between sections**: Ensure consistent spacing between sections.
-- **Incorrect spacing between section titles and text**: Maintain consistent spacing between section titles and text.
-- **Incorrect spacing between figure captions/table titles and text**: Ensure consistent spacing between figure captions/table titles and text.
+### 图片题目结尾必须有句号
 
-## Reference Formatting
+<img src="figures/figure_period.png" alt="示例" width="400"/>
 
-- References should use **9-point** font.
-- Missing commas and incorrect punctuation in references (wrong format).
-- References are correctly numbered in square brackets (e.g., "[1]").
-- No need to categorize references by type (e.g., "Books", "Computer Software").
-- Incorrect character style in references. Ex. the italics should be used for titles of books and journals, not for authors or publication years.
-- Incorrect formatting for volume and number (should be "Vol. XX, No. XX" with capital letters).
+- **图题格式**：图题格式需统一（详见模板）。
+
+## 字体
+
+- **字号**：小标题字号应大于正文。
+- **图中文字**：所有图中的文字需与正文字体要求一致。
+
+## 间距
+
+**常见错误**：
+
+- **行距不一致**：全文行距需统一。
+- **段落间距不一致**：段落间距需统一。
+- **章节间距不一致**：章节间距需统一。
+- **标题与正文间距不一致**：标题与正文间距需统一。
+- **图题/表题与正文间距不一致**：图题/表题与正文间距需统一。
+
+## 参考文献格式
+
+- 参考文献应使用**9号字体**。
+- 参考文献中缺少逗号或标点错误（格式错误）。
+- 参考文献应按方括号编号（如“[1]”）。
+- 不需要按类型分类（如“Books”、“Computer Software”）。
+- 参考文献字符样式错误。例如，书名和期刊名应斜体，作者和年份不应斜体。
+- 卷号和期号格式错误（应为“Vol. XX, No. XX”，首字母大写）。
 
 ## Tips
 
-You can refer to the [AIAA Journal Author Guidelines](https://www.aiaa.org/publications/journals/Journal-Author) for more information on formatting. However, if you find any discrepancies between the guidelines and the template, please follow the template provided or consult with the instructor and TAs for clarification.
+
+可参考 [AIAA Journal Author Guidelines](https://www.aiaa.org/publications/journals/Journal-Author) 获取更多格式信息。但如有与本模板不一致之处，请以本模板为准，或咨询老师和助教。
+
+## 备注
+
+- 2025 Teaching Team 修正了word模板中长期以来存在的问题，包括所有
+  - 段落标题与正文的间距错误，段落内、段落间的间距错误
+  - 图/表标题题标点错误以及图/表标题与正文的间距错误
+  - 参考文献的字体大小错误
+- 2025 TC TAs (陈泽奕、王欣畅)基于word模板创建了LaTeX模板，并附在此供大家使用。
+  - [ENGR1000J-template](https://github.com/zicheng1744/ENGR1000J-template)
+  - 由于LaTeX模板仍处于更新完善中，请在使用过程中把可能潜在的格式问题反馈给助教，我们会及时更新。
