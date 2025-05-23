@@ -63,6 +63,10 @@
 错误示范：
 <img src="figures/figure_caption_spacing.png" alt="示例" width="500"/>
 
+- **每一页文字底部与页脚间距不一致**
+错误示范：
+<img src="figures/footer_spacing.png" alt="示例" width="500"/>
+
 ## 参考文献格式
 
 - 参考文献应使用**9号字体**

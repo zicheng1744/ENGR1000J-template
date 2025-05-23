@@ -76,11 +76,13 @@ This guidance is for ENGR1000J-S2 report writing. The following summarizes commo
   <img src="figures/section_title_spacing.png" alt="Example" width="250"/>
 &nbsp;
 
-- **Inconsistent spacing between figure/table captions and text**
+- **Inconsistent spacing between bottom of the text and the footer**
 
   Incorrect example:
 
-  <img src="figures/figure_caption_spacing.png" alt="Example" width="400"/>
+  <img src="figures/footer_spacing.png" alt="Example" width="500"/>
+
+&nbsp;
 
 ## Reference Formatting
 
