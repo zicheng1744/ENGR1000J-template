@@ -24,7 +24,7 @@
 
 ## 使用方法
 
-你可以直接从release页面下载最新版本的LaTeX模板，或者克隆本仓库到本地：
+你可以直接从[release页面](https://github.com/zicheng1744/ENGR1000J-template/releases)下载最新版本的LaTeX模板，或者克隆本仓库到本地：
 
 ```bash
 git clone https://github.com/zicheng1744/ENGR1000J-template.git
@@ -65,7 +65,7 @@ This template is applicable to the phase 1/2 report for this course. It was crea
 
 ## Usage
 
-You can download the latest version of the LaTeX template directly from the release page, or clone this repository locally:
+You can download the latest version of the LaTeX template directly from the [release page](https://github.com/zicheng1744/ENGR1000J-template/releases), or clone this repository locally:
 
 ```bash
 git clone https://github.com/zicheng1744/ENGR1000J-template.git
