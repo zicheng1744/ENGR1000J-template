@@ -7,35 +7,41 @@
 ### 正文需两端对齐
 
 - 正确示范：
-<img src="figures/align.png" alt="示例" width="300"/>
+
+<img src="figures/align.png" alt="示例" width="250" style="border: 1px solid #ddd; padding: 5px;"/>
 
   
 ### 每段开头不需要空格
 
 - 错误示范：
-<img src="figures/indent.png" alt="示例" width="600"/>
+
+<img src="figures/indent.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
   
 ### 标题不能与正文分在不同页，标题应与正文在同一页
 
 - 错误示范：
-<img src="figures/page_break.png" alt="示例" width="300"/>
+
+<img src="figures/page_break.png" alt="示例" width="250" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ### 图片题目结尾必须有句号
 
 - 错误示范：
-<img src="figures/figure_period.png" alt="示例" width="400"/>
+
+<img src="figures/figure_period.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ### 图题格式 (Fig.X &emsp; Caption)
 
 - 错误示范：
-<img src="figures/caption.png" alt="示例" width="400"/>
+
+<img src="figures/caption.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ## 字体
 
 - **字号**：小标题字号应大于正文
 
 - 错误示范：
-<img src="figures/font_size.png" alt="示例" width="600"/>
+
+<img src="figures/font_size.png" alt="示例" width="600" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **图中文字**：所有图中的文字需与正文字体要求一致
 
@@ -44,28 +50,40 @@
 **常见错误**：
 
 - **行距不一致**
+
 错误示范：
-<img src="figures/line_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/line_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **段落间距不一致**
+
 错误示范：
-<img src="figures/paragraph_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/paragraph_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **章节间距不一致**
+
 错误示范：
-<img src="figures/section_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/section_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **标题与正文间距不一致**
+
 错误示范：
-<img src="figures/section_title_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/section_title_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **图题/表题与正文间距不一致**
+
 错误示范：
-<img src="figures/figure_caption_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/figure_caption_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 - **每一页文字底部与页脚间距不一致**
+
 错误示范：
-<img src="figures/footer_spacing.png" alt="示例" width="500"/>
+
+<img src="figures/footer_spacing.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ## 参考文献格式
 
