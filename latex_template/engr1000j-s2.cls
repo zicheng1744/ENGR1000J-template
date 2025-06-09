@@ -5,7 +5,7 @@
 % Constructed by Zeyi Chen and revised by Xinchang Wang
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{engr1000j-s2}[2025/05/21, v0.2 Custom ENGR1000J Template]
+\ProvidesClass{engr1000j-s2}[2025/06/09, v1.1 Custom ENGR1000J Template]
 
 \LoadClass[10pt]{article}
 
@@ -101,7 +101,7 @@
   \fancyhf{}
   \fancyfoot{
     \parbox{\textwidth}{\large\raggedright\textcolor{gray}{
-      ${}^{1}$ University of Michigan -- Shanghai Jiao Tong University Joint Institute\\
+      ${}^{1}$ Shanghai Jiao Tong University\\
       ${}^{2}$ Another Institute if applicable
     }}
   }
@@ -114,7 +114,7 @@
   \fancyfoot{
     \noindent
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc@{}}
-      \adjustbox{valign=c}{\includegraphics[height=0.3in]{figures/JI logo.png}} &
+      \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/sjtubannerblue.png}} &
       \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/team logo.png}} &
       \adjustbox{valign=c}{\makecell[c]{\textcolor{gray}{Instructors:} \\ \textcolor{gray}{Dr. Yanfeng Shen} \\ \textcolor{gray}{Dr. Ting Sun}}} &
       \adjustbox{valign=c}{\raggedleft\small\textcolor{gray}{Page \textbf{\thepage} of 13}}
