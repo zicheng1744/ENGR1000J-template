@@ -29,25 +29,54 @@
 \RequirePackage[numbib,nottoc]{tocbibind} 
 \RequirePackage{array}
 \RequirePackage{makecell}
+\RequirePackage{float}
+\RequirePackage{threeparttable}
+\RequirePackage{etoolbox}
 
 
 % --- Page Geometry ---
 \RequirePackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
 
-% --- Table of Contents Customizations ---
-\renewcommand{\contentsname}{Table of Contents}
+% --- Table of Contents Customizations (Definitive Final Version) ---
 
-\renewcommand{\cfttoctitlefont}{\Large\bfseries}
-\renewcommand{\cftsecfont}{\normalsize\bfseries\MakeTextUppercase}
+% 1. 标题样式: 变大、居中、不加粗
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\cfttoctitlefont}{\huge\normalfont}
+
+\setlength{\cftaftertoctitleskip}{2em}
+
+% 2. Section 级别条目的基础样式
+%    字体设为常规，不再尝试在这里进行大小写转换
+\renewcommand{\cftsecfont}{\normalfont}
+%    设置引导线为点状
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} 
+%    设置页码字体
+\renewcommand{\cftsecpagefont}{\normalfont} 
+%    在章节编号后加上点
+\renewcommand{\cftsecaftersnum}{.} 
+%    为编号（如 "VIII."）预留足够宽度以对齐
+\setlength{\cftsecnumwidth}{3em} 
+%    设置条目之间的垂直间距
+\setlength{\cftbeforesecskip}{18pt} 
+
+% 3. 【核心修正】使用 etoolbox 对 tocloft 内部命令进行精确修补
+%    这会在 hyperref 处理之后，安全地将目录条目标题转换为大写
+\makeatletter
+\patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\makeatother
+
+% --- Subsection & Subsubsection Formatting ---
+% Also add \protect here for safety
+\renewcommand{\cftsubsecfont}{\normalsize\protect\MakeTextUppercase}
+\renewcommand{\cftsubsubsecfont}{\normalsize\protect\MakeTextUppercase}
+\setlength{\cftbeforesubsecskip}{8pt}
+\setlength{\cftbeforesubsubsecskip}{8pt}
+
+% --- Subsection & Subsubsection Formatting (kept from original for consistency) ---
 \renewcommand{\cftsubsecfont}{\normalsize\MakeTextUppercase}
 \renewcommand{\cftsubsubsecfont}{\normalsize\MakeTextUppercase}
-
-\setlength{\cftbeforetoctitleskip}{2em}  
-\setlength{\cftaftertoctitleskip}{13pt} 
-\setlength{\cftbeforesecskip}{12pt}     
-\setlength{\cftbeforesubsecskip}{8pt}    
-\setlength{\cftbeforesubsubsecskip}{8pt}  
-
+\setlength{\cftbeforesubsecskip}{8pt}
+\setlength{\cftbeforesubsubsecskip}{8pt}
 % --- Bibliography Settings ---
 \RequirePackage[sort&compress,numbers]{natbib}
 \bibliographystyle{new-aiaa}
@@ -58,7 +87,9 @@
 
 
 % --- Paragraph Formatting ---
-\setlength{\parskip}{18pt}
+\setlength{\parskip}{13pt}
+\setlength{\textfloatsep}{18pt} 
+\setlength{\intextsep}{13pt}
 
 % --- Line Spacing ---
 \AtBeginDocument{
@@ -92,9 +123,6 @@
   {\arabic{subsubsection}.\quad}{0pt}{}[]
 \titlespacing{\subsubsection}{0pt}{0.5\baselineskip}{13pt}
 
-% --- Table of Contents Spacing ---
-\setlength{\cftbeforesecskip}{4pt}       
-\setlength{\cftbeforetoctitleskip}{0pt}  
 
 % --- Page Styles ---
 \fancypagestyle{firstpage}{
@@ -117,7 +145,7 @@
       \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/sjtubannerblue.png}} &
       \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/team logo.png}} &
       \adjustbox{valign=c}{\makecell[c]{\textcolor{gray}{Instructors:} \\ \textcolor{gray}{Dr. Yanfeng Shen} \\ \textcolor{gray}{Dr. Ting Sun}}} &
-      \adjustbox{valign=c}{\raggedleft\small\textcolor{gray}{Page \textbf{\thepage} of 13}}
+      \adjustbox{valign=c}{\raggedleft\small\textcolor{gray}{Page \textbf{\thepage} of 10}}
     \end{tabular*}
   }
   \renewcommand{\footrulewidth}{0pt}
