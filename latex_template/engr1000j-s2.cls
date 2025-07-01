@@ -5,7 +5,7 @@
 % Constructed by Zeyi Chen and revised by Xinchang Wang
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{engr1000j-s2}[2025/06/09, v1.1 Custom ENGR1000J Template]
+\ProvidesClass{engr1000j-s2}[2025/06/30, v1.3 Custom ENGR1000J Template]
 
 \LoadClass[10pt]{article}
 
@@ -37,30 +37,18 @@
 % --- Page Geometry ---
 \RequirePackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
 
-% --- Table of Contents Customizations (Definitive Final Version) ---
+% --- Table of Contents ---
 
-% 1. 标题样式: 变大、居中、不加粗
 \renewcommand{\contentsname}{Table of Contents}
 \renewcommand{\cfttoctitlefont}{\huge\normalfont}
 
 \setlength{\cftaftertoctitleskip}{2em}
-
-% 2. Section 级别条目的基础样式
-%    字体设为常规，不再尝试在这里进行大小写转换
-\renewcommand{\cftsecfont}{\normalfont}
-%    设置引导线为点状
+\renewcommand{\cftsecfont}{\bfseries}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} 
-%    设置页码字体
-\renewcommand{\cftsecpagefont}{\normalfont} 
-%    在章节编号后加上点
+\renewcommand{\cftsecpagefont}{\bfseries} 
 \renewcommand{\cftsecaftersnum}{.} 
-%    为编号（如 "VIII."）预留足够宽度以对齐
 \setlength{\cftsecnumwidth}{3em} 
-%    设置条目之间的垂直间距
 \setlength{\cftbeforesecskip}{18pt} 
-
-% 3. 【核心修正】使用 etoolbox 对 tocloft 内部命令进行精确修补
-%    这会在 hyperref 处理之后，安全地将目录条目标题转换为大写
 \makeatletter
 \patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
 \makeatother
@@ -77,6 +65,7 @@
 \renewcommand{\cftsubsubsecfont}{\normalsize\MakeTextUppercase}
 \setlength{\cftbeforesubsecskip}{8pt}
 \setlength{\cftbeforesubsubsecskip}{8pt}
+
 % --- Bibliography Settings ---
 \RequirePackage[sort&compress,numbers]{natbib}
 \bibliographystyle{new-aiaa}
@@ -128,7 +117,7 @@
 \fancypagestyle{firstpage}{
   \fancyhf{}
   \fancyfoot{
-    \parbox{\textwidth}{\large\raggedright\textcolor{gray}{
+    \parbox{\textwidth}{\large\raggedright{
       ${}^{1}$ Shanghai Jiao Tong University\\
       ${}^{2}$ Another Institute if applicable
     }}
@@ -144,8 +133,8 @@
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc@{}}
       \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/sjtubannerblue.png}} &
       \adjustbox{valign=c}{\includegraphics[height=0.4in]{figures/team logo.png}} &
-      \adjustbox{valign=c}{\makecell[c]{\textcolor{gray}{Instructors:} \\ \textcolor{gray}{Dr. Yanfeng Shen} \\ \textcolor{gray}{Dr. Ting Sun}}} &
-      \adjustbox{valign=c}{\raggedleft\small\textcolor{gray}{Page \textbf{\thepage} of 10}}
+      \adjustbox{valign=c}{\makecell[c]{{Instructors:} \\ {Dr. Yanfeng Shen} \\ {Dr. Ting Sun}}} &
+      \adjustbox{valign=c}{\raggedleft\small{Page \textbf{\thepage} of 12}}
     \end{tabular*}
   }
   \renewcommand{\footrulewidth}{0pt}
