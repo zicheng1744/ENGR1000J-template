@@ -45,11 +45,13 @@ $LaTeX$: First page footnotes need to be adjusted in the `engr1000j-s2.cls` file
 $LaTeX$: Needs to be adjusted in the `engr1000j-s2.cls` file
 
 - Incorrect example:
+
  <img src="figures/page_number_error.png" alt="示例" width="200" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ### 6. Do not leave large blank spaces at the end of a page
 
 - Incorrect example:
+
 <img src="figures/too_much_space.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ### 7. Do not insert consecutive figures and tables
@@ -105,7 +107,6 @@ $LaTeX$: If you want to use subheadings, please use `\subsection{}`, `\subsubsec
 ### 2. Do not use items as subheadings
 
 - Distinction: Subheadings represent the beginning of new content blocks, bullet points represent enumeration
-- 
 
 ---
 ## Part 3: Spacing
@@ -156,28 +157,77 @@ $LaTeX$: If you want to use subheadings, please use `\subsection{}`, `\subsubsec
 ### 8. Inconsistent spacing between equations and body text
 
 - Incorrect example:
+
 <img src="figures/equation_error.png" alt="示例" width="500" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ---
 ## Part 4: Figures
 
-### Figure captions must end with a period
+### 1. Caption capitalization
+
+- Capitalize **only the first word** of the caption.
+- Capitalize any **proper nouns** (names, places, etc.).
+- Incorrect example:
+
+<img src="figures/figure_capitalization.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+### 2. Tabs and spaces
 
 - Incorrect example:
 
-<img src="figures/figure_period.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+<img src="figures/figure_caption_space.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
-### Figure caption format (Fig.X &emsp; Caption)
+### 3. Position
 
+- Put the figure and its annotation in the same page
 - Incorrect example:
 
-<img src="figures/caption.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+<img src="figures/figure_position.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
+### 4. Font size and font style
+
+- The font size and font style in the figure should be consistent with the body part of your report
+- Incorrect example:
+
+<img src="figures/figure_font_size.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+<img src="figures/figure_font_style.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+<img src="figures/gantt_chart_capitalization.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+### 5. Figure label and legend
+
+- Good example:
+
+<img src="figures/figure_example.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ---
 
 ## Part 5: Tables
 
+### 1.  Caption
+
+- No periods
+- A "tab" between table number and the table title
+- Incorrect example:
+
+<img src="figures/table_caption_no_period.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+<img src="figures/table_caption_tab.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+### 2.  Font style
+
+- No need to use bold type in the first row
+- Incorrect example:
+
+<img src="figures/table_bold.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
+
+### 3. Alignment
+
+- Only the first column is left-aligned; the other columns are center-aligned
+- Incorrect example:
+
+<img src="figures/table_alignment.png" alt="示例" width="400" style="border: 1px solid #ddd; padding: 5px;"/>
 
 ---
 
